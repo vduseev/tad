@@ -1,0 +1,15 @@
+[package]
+name = "tad"
+version = "0.1.0"
+authors = ["Vagiz Duseev <vagiz@duseev.com>"]
+license = "Apache-2.0"
+description = "Program to test solutions of algorithms & data structures problems"
+readme = "README.md"
+homepage = "https://github.com/vduseev/tad"
+repository = "https://github.com/vduseev/tad"
+keywords = ["algorithms", "data structures", "acm", "cli", "hackerrank", "leetcode", "test"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
