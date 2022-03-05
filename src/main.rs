@@ -1,3 +1,7 @@
+mod config;
+
 fn main() {
-    println!("Hello, world!");
+    let config = config::parse_config("tad.yml");
+
+    println!("config:\n{}", config);
 }

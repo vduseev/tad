@@ -1,5 +1,6 @@
 [package]
 name = "tad"
+edition = "2021"
 version = "0.1.0"
 authors = ["Vagiz Duseev <vagiz@duseev.com>"]
 license = "Apache-2.0"
@@ -13,3 +14,5 @@ categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.8"
