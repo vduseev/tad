@@ -7,7 +7,7 @@ description = "Program to test solutions of algorithms & data structures problem
 readme = "README.md"
 homepage = "https://github.com/vduseev/tad"
 repository = "https://github.com/vduseev/tad"
-keywords = ["acm", "cli", "hackerrank", "leetcode", "test", "algorithms"]
+keywords = ["hackerrank", "leetcode", "test", "algorithms"]
 categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
