@@ -1,11 +1,15 @@
 mod config;
-mod tests;
+mod test_cases;
 
 fn main() {
     let config = config::parse_config("tad.yml");
+    println!("config:\n{}", config);
 
     // Collect input files
-    tests::collect(&config.input, &config.output);
+    let cases = test_cases::collect_test_cases(&config.input, &config.output);
 
-    println!("config:\n{}", config);
+    // Iterate over cases
+    for (name, case) in &cases {
+        println!("{}", name);
+    }
 }
