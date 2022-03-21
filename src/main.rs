@@ -11,13 +11,13 @@ static CHECKMARK: Emoji<'_, '_> = Emoji("✅ ", "");
 static SPARKLE: Emoji<'_, '_> = Emoji("✨ ", ":-)");
 
 fn main() {
+    let config = config::get_config();
+    println!("config:\n{}", config);
+
     let started = Instant::now();
     let spinner_style = ProgressStyle::default_spinner()
         .tick_chars("⠁⠂⠄⡀⢀⠠⠐⠈ ")
         .template("{prefix:.bold.dim} {spinner} {wide_msg}");
-
-    let config = config::parse_config("tad.yml");
-    println!("config:\n{}", config);
 
     println!(
         "{} {}Looking up test cases...",
@@ -26,7 +26,7 @@ fn main() {
     );
 
     // Collect input files
-    let cases = test_cases::collect_test_cases(&config.input, &config.output);
+    let cases = test_cases::collect_test_cases(&config.inputs, &config.outputs);
 
     // Iterate over cases
     let length = cases.len();
